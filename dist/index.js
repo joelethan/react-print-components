@@ -14,7 +14,11 @@ var PrintComponents = /** @class */ (function (_super) {
             window.print();
         };
         _this.onPrintClose = function () {
-            window.onafterprint = function () { return null; };
+            var closeFunction = _this.props.closeFunction;
+            window.onafterprint = function () {
+                closeFunction();
+                return null;
+            };
             _this.rootEl.remove();
         };
         _this.createDivElement = function (id, className) {

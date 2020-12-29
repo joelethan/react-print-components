@@ -1,7 +1,7 @@
 {
-  "name": "react-print-components",
+  "name": "react-print-components-with-close-function",
   "description": "Print specific react components in the browser.",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "keywords": [
     "react",
     "component",
@@ -10,10 +10,10 @@
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "git@github.com:arthur-souza/react-print-components.git",
-  "homepage": "https://github.com/arthur-souza/react-print-components#readme",
+  "repository": "git@github.com:joelethan/react-print-components.git",
+  "homepage": "https://github.com/joelethan/react-print-components#readme",
   "bugs": {
-    "url": "https://github.com/arthur-souza/react-print-components/issues"
+    "url": "https://github.com/joelethan/react-print-components/issues"
   },
   "author": "Arthur Souza <arthur@arthursouza.com.br>",
   "license": "MIT",
@@ -26,6 +26,8 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "tslib": "^1.9.3"
   },
   "peerDependencies": {

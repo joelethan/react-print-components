@@ -5,6 +5,7 @@ export interface IProps {
   trigger: JSX.Element;
   children: JSX.Element | JSX.Element[] | string;
   className?: string;
+  closeFunction: Function;
 }
 
 export class PrintComponents extends React.Component<IProps, {}> {
@@ -41,7 +42,11 @@ export class PrintComponents extends React.Component<IProps, {}> {
   }
 
   private onPrintClose = () => {
-    window.onafterprint = () => null;
+    const { closeFunction } = this.props;
+    window.onafterprint = () => {
+      closeFunction();
+      return null
+    };
 
     this.rootEl.remove();
   }

@@ -3,6 +3,7 @@ export interface IProps {
     trigger: JSX.Element;
     children: JSX.Element | JSX.Element[] | string;
     className?: string;
+    closeFunction: Function;
 }
 export declare class PrintComponents extends React.Component<IProps, {}> {
     private rootId;
